@@ -1,0 +1,13 @@
+[language-server.ocaml]
+command = "ocamllsp"
+
+[language-server.typescript]
+command = "typescript-language-server"
+
+[[language]]
+name = "ocaml"
+scope = "source.ocaml"
+injection-regex = "ocaml"
+file-types = ["ml"]
+indent = { tab-width = 4, unit = " " }
+formatter = { command = "ocamlformat" , args = ["--stdin"] }
