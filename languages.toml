@@ -7,6 +7,7 @@ command = "typescript-language-server"
 [language-server.jdtls]
 command = "jdtls"
 
+# Java
 [[language]]
 name = "java"
 scope = "source.java"
@@ -16,10 +17,26 @@ roots = ["pom.xml", "build.gradle", "build.gradle.kts"]
 language-servers = [ "jdtls" ]
 indent = { tab-width = 4, unit = " " }
 
+
+[[grammar]]
+name = "java"
+source = { git = "https://github.com/tree-sitter/tree-sitter-java", rev = "09d650def6cdf7f479f4b78f595e9ef5b58ce31e" }
+
+# avaJ
+
+# OCaml
+
 [[language]]
 name = "ocaml"
 scope = "source.ocaml"
 injection-regex = "ocaml"
 file-types = [ "ml" ]
+comment-token = "(**)"
 indent = { tab-width = 4, unit = " " }
 formatter = { command = "ocamlformat" , args = ["--stdin"] }
+
+[[grammar]]
+name = "ocaml"
+source = { git = "https://github.com/tree-sitter/tree-sitter-ocaml", rev = "23d419ba45789c5a47d31448061557716b02750a", subpath = "ocaml" }
+
+# lmaCO
