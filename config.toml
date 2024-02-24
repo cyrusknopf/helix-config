@@ -16,7 +16,13 @@ select = "underline"
 [editor.soft-wrap]
 enable = true
 
-# BELOW IS VIM BINDS
+[editor.statusline]
+left = ["mode", "spinner", "version-control" ]
+center = [ "file-name" ]
+right = [ "position-percentage" ]
+
+
+# ~ vim binds ~
 [keys.normal]
 # Quick iteration on config changes
 C-o = ":config-open"
