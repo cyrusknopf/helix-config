@@ -32,7 +32,7 @@ scope = "source.ocaml"
 injection-regex = "ocaml"
 file-types = [ "ml" ]
 comment-token = "(**)"
-indent = { tab-width = 4, unit = " " }
+indent = { tab-width = 4, unit = "    " }
 formatter = { command = "ocamlformat" , args = ["--stdin"] }
 
 [[grammar]]
