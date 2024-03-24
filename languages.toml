@@ -7,6 +7,10 @@ command = "typescript-language-server"
 [language-server.jdtls]
 command = "jdtls"
 
+[language-server.bqnlsp]
+command = "bqnlsp"
+
+
 # Java
 [[language]]
 name = "java"
@@ -15,7 +19,7 @@ injection-regex = "java"
 file-types = ["java", "jav"]
 roots = ["pom.xml", "build.gradle", "build.gradle.kts"]
 language-servers = [ "jdtls" ]
-indent = { tab-width = 4, unit = " " }
+indent = { tab-width = 4, unit = "    " }
 
 
 [[grammar]]
@@ -40,3 +44,49 @@ name = "ocaml"
 source = { git = "https://github.com/tree-sitter/tree-sitter-ocaml", rev = "23d419ba45789c5a47d31448061557716b02750a", subpath = "ocaml" }
 
 # lmaCO
+
+# Python
+[[language]]
+name = "python"
+language-servers = ["pylsp"]
+roots = [".git"]
+workspace-lsp-roots = ["src/updater"]
+auto-format = true
+
+[language-server.pylsp.config.pylsp.plugins]
+flake8 = {enabled = true, ignore = ["E501"]}
+autopep8 = {enabled = true}
+mccabe = {enabled = true}
+pycodestyle = {enabled = true}
+pyflakes = {enabled = true}
+pylint = {enabled = true}
+yapf = {enabled = true}
+ruff = { enabled = true}
+# nothyP
+
+# BQN
+[[language]]
+name = "bqn"
+file-types = ["bqn"]
+comment-token = "#"
+indent = { tab-width = 2, unit = "  " }
+shebangs = ["bqn", "cbqn"]
+roots = []
+injection-regex = "bqn"
+scope = "scope.bqn"
+language-servers = ["bqnlsp"]
+language-id = "bqn"
+
+[[grammar]]
+name = "bqn"
+source.git = "https://github.com/shnarazk/tree-sitter-bqn"
+source.rev = "a56f2d20ee42d39afe67730eeb13c2f41e1b0877"
+
+[language.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+"'" = "'"
+'"' = '"'
+'⟨' = '⟩'
+# NQB

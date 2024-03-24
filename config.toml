@@ -159,3 +159,9 @@ P = "paste_clipboard_before"
 
 # Escape the madness! No more fighting with the cursor! Or with multiple cursors!
 esc = ["collapse_selection", "keep_primary_selection", "normal_mode"]
+
+[keys.insert."\\"]
+"=" = [ ":insert-output /bin/echo -n ×", "move_char_right" ]
+minus = [ ":insert-output /bin/echo -n ÷", "move_char_right" ]
+"+" = [ ":insert-output /bin/echo -n ⋆", "move_char_right" ]
+# ...

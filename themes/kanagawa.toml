@@ -12,7 +12,8 @@
 ## User interface
 "ui.selection" = { bg = "waveBlue2" }
 "ui.selection.primary" = { bg = "waveBlue1" }
-"ui.background" = { fg = "fujiWhite", bg = "sumiInk1" }
+# "ui.background" = { fg = "fujiWhite", bg = "sumiInk1" }
+"ui.background" = { fg = "fujiWhite", bg = "spotGrey" }
 
 "ui.linenr" = { fg = "sumiInk4" }
 "ui.linenr.selected" = { fg = "roninYellow" }
@@ -154,3 +155,4 @@ waveRed       = "#E46876" # standout specials 1, e.g. builtin variables
 peachRed      = "#FF5D62" # standout specials 2, e.g. exception handling, returns
 surimiOrange  = "#FFA066" # constants, imports, booleans
 katanaGray    = "#717C7C" # deprecated
+spotGrey      = "#1a1b1b" # SPOT
